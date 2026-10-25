@@ -25,7 +25,7 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
-    // Funkcja podpinana pod przycisk "Wiêksze obra¿enia"
+    // Funkcja podpinana pod przycisk "Bigger damages"
     public void BuyDamageUpgrade()
     {
         int cost = 10;
@@ -34,7 +34,6 @@ public class UpgradeManager : MonoBehaviour
             playerPoints -= cost;
             UpdatePointsUI();
             Debug.Log("Kupiono ulepszenie: Wiêksze obra¿enia!");
-            // W przysz³oœci przeka¿emy st¹d informacjê do statku gracza
         }
         else
         {
@@ -42,7 +41,36 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
-    // Przycisk zamykaj¹cy sklep i wznawiaj¹cy grê
+    public void BuySpeedUpgrade()
+    {
+        int cost = 11;
+        if (playerPoints >= cost)
+        {
+            playerPoints -= cost;
+            UpdatePointsUI();
+            Debug.Log("Kupiono ulepszenie: Wiêksze szybkoœæ!");
+        }
+        else
+        {
+            Debug.Log("Za ma³o punktów na to ulepszenie!");
+        }
+    }
+
+    public void BuyLifeUpgrade()
+    {
+        int cost = 12;
+        if (playerPoints >= cost)
+        {
+            playerPoints -= cost;
+            UpdatePointsUI();
+            Debug.Log("Kupiono ulepszenie: Wiêcej zycia!");
+        }
+        else
+        {
+            Debug.Log("Za ma³o punktów na to ulepszenie!");
+        }
+    }
+
     public void CloseShop()
     {
         gameObject.SetActive(false); // Ukrywa panel
