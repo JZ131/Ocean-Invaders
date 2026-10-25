@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c88f196f1fdc14eaf2d0985b3f9fdc, type: 3}
   m_Name: ShieldPickup
   m_EditorClassIdentifier: Assembly-CSharp::PickupData
-  displayName: 
+  displayName: Tarcza
   type: 1
   value: 10
   duration: 5
-  sprite: {fileID: 0}
+  sprite: {fileID: 5169285178913470328, guid: ec79df3ce1258f948a4529b1023e925e, type: 3}
   fallSpeed: 2

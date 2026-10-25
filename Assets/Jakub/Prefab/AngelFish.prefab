@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 5741516808309245706}
   - component: {fileID: 6203377343068793859}
   - component: {fileID: 2018775101375205715}
-  - component: {fileID: -4714926450198109684}
+  - component: {fileID: 1421868190460392904}
   m_Layer: 0
   m_Name: AngelFish
   m_TagString: Enemy
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
   m_BoundsMode: 0
---- !u!95 &-4714926450198109684
+--- !u!95 &1421868190460392904
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0

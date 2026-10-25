@@ -20,6 +20,5 @@ public class PickupData : ScriptableObject
     [Tooltip("Dla Shield / SpecialAttack: ile sekund trwa efekt.")]
     public float duration = 5f;
 
-    public Sprite sprite;
     public float fallSpeed = 2f;
 }

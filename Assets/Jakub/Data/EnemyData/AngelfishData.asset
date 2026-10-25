@@ -17,5 +17,5 @@ MonoBehaviour:
   maxHealth: 3
   contactDamage: 1
   drops:
-  - pickup: {fileID: 11400000, guid: 7994219859055be4da05a19b831f51ea, type: 2}
-    chance: 0.435
+  - pickupPrefab: {fileID: 4382533157273347940, guid: 472c7a070b64fe249a96e2904caa548d, type: 3}
+    chance: 0.666

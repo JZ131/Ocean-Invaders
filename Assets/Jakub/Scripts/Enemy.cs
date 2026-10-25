@@ -5,10 +5,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour, IDamageable
 {
     [SerializeField] private EnemyData data;
-    [SerializeField] private Pickup pickupPrefab;        // jeden wspólny prefab pickupa
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float hitFlashTime = 0.08f;
 
+    /// <summary>Wywoływane po zabiciu - przyda się do punktów / liczenia wrogów na poziomie.</summary>
     public static event Action<Enemy> Died;
 
     public EnemyData Data => data;
@@ -21,7 +21,6 @@ public class Enemy : MonoBehaviour, IDamageable
         if (spriteRenderer == null) spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         if (spriteRenderer != null)
         {
-            if (data != null && data.sprite != null) spriteRenderer.sprite = data.sprite;
             baseColor = spriteRenderer.color;
         }
         CurrentHealth = data != null ? data.maxHealth : 1;
@@ -56,25 +55,27 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void RollDrops()
     {
-        if (data == null || pickupPrefab == null) return;
+        if (data == null) return;
 
         foreach (var entry in data.drops)
         {
-            if (entry.pickup == null) continue;
+            if (entry.pickupPrefab == null) continue;
             if (UnityEngine.Random.value > entry.chance) continue;
 
-            // lekki rozrzut, żeby kilka pickupów nie nakładało się na siebie
+            // lekki rozrzut, żeby kilka pickupów nie wypadało z jednego punktu
             Vector3 offset = new Vector3(UnityEngine.Random.Range(-0.3f, 0.3f), 0f, 0f);
-            Pickup p = Instantiate(pickupPrefab, transform.position + offset, Quaternion.identity);
-            p.Init(entry.pickup);
+            Instantiate(entry.pickupPrefab, transform.position + offset, Quaternion.identity);
         }
     }
+
+    // Wróg ma Collider2D z "Is Trigger" i Rigidbody2D (Kinematic).
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (data == null) return;
         if (other.TryGetComponent(out IPickupCollector _) && other.TryGetComponent(out IDamageable player))
         {
             player.TakeDamage(data.contactDamage);
+            // opcjonalnie: wróg ginie przy zderzeniu (jak kamikaze) -> TakeDamage(CurrentHealth);
         }
     }
 }

@@ -10,17 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 908e8fee1ff5068439a9117a0d6337d0, type: 3}
-  m_Name: AnglerfishData
+  m_Name: ClassicFishData
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  displayName: "\u017Babnica"
+  displayName: Ryba
   sprite: {fileID: 0}
-  maxHealth: 5
-  contactDamage: 5
-  moveSpeed: 1
+  maxHealth: 1
+  contactDamage: 1
   drops:
-  - pickup: {fileID: 11400000, guid: 5e62f1991b2f5914e9703abf016d6710, type: 2}
-    chance: 0.641
-  - pickup: {fileID: 11400000, guid: dc5ee29532b0eb34fa5ad82cc38e4d34, type: 2}
-    chance: 0.263
-  - pickup: {fileID: 11400000, guid: e6dd6ce0d51cc2548a992a2279f0aac0, type: 2}
-    chance: 0.156
+  - pickupPrefab: {fileID: 4382533157273347940, guid: 472c7a070b64fe249a96e2904caa548d, type: 3}
+    chance: 0.334

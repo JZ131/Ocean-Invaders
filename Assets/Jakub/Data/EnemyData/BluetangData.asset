@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 908e8fee1ff5068439a9117a0d6337d0, type: 3}
-  m_Name: SeahorseData
+  m_Name: BluetangData
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  displayName: Konik Morski
+  displayName: Pokolec
   sprite: {fileID: 0}
   maxHealth: 3
   contactDamage: 2
-  moveSpeed: 1
   drops:
-  - pickup: {fileID: 11400000, guid: 7994219859055be4da05a19b831f51ea, type: 2}
+  - pickupPrefab: {fileID: 4382533157273347940, guid: 472c7a070b64fe249a96e2904caa548d, type: 3}
     chance: 0.838
-  - pickup: {fileID: 11400000, guid: 5e62f1991b2f5914e9703abf016d6710, type: 2}
-    chance: 0.275
+  - pickupPrefab: {fileID: 4382533157273347940, guid: de634564d1460ab4bafe2f65b3011b8a, type: 3}
+    chance: 0.334

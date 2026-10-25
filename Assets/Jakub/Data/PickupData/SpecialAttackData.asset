@@ -16,5 +16,5 @@ MonoBehaviour:
   type: 2
   value: 10
   duration: 5
-  sprite: {fileID: 0}
-  fallSpeed: 2
+  sprite: {fileID: 5169285178913470328, guid: ec79df3ce1258f948a4529b1023e925e, type: 3}
+  fallSpeed: 4

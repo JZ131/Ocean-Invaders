@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 908e8fee1ff5068439a9117a0d6337d0, type: 3}
-  m_Name: GoldfishData
+  m_Name: SharkData
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  displayName: "Z\u0142ota rybka"
+  displayName: Rekin
   sprite: {fileID: 0}
-  maxHealth: 1
-  contactDamage: 1
-  moveSpeed: 1
+  maxHealth: 10
+  contactDamage: 5
   drops:
-  - pickup: {fileID: 11400000, guid: 7994219859055be4da05a19b831f51ea, type: 2}
-    chance: 0.359
+  - pickupPrefab: {fileID: 4382533157273347940, guid: 0583ec9c4f1f3b24caf30f6d12491b9b, type: 3}
+    chance: 1
+  - pickupPrefab: {fileID: 4382533157273347940, guid: 875d89977aa0d1d4fa2f26f5acd426f3, type: 3}
+    chance: 0.492

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 95254377346556115}
   - component: {fileID: 4382533157273347940}
   m_Layer: 0
-  m_Name: Pickup
+  m_Name: 10 Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
